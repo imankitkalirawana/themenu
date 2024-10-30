@@ -11,13 +11,14 @@ import {
   sendMail,
   sendSMS
 } from '@/lib/functions';
+import Client from '@/models/Client';
 
 export async function POST(request: Request) {
   try {
     await connectDB();
     const { id } = await request.json();
     if (id.includes('@')) {
-      const user = await User.findOne({ email: id }).select('email');
+      const user = await Client.findOne({ email: id }).select('email');
       if (user) {
         return NextResponse.json(
           { message: 'User Already Exists' },
@@ -37,7 +38,7 @@ export async function POST(request: Request) {
       const phone = phoneValidate(id);
       if (phone) {
         try {
-          const user = await User.findOne({ phone: phone });
+          const user = await Client.findOne({ phone: phone });
           if (user) {
             return NextResponse.json(
               { message: 'User Already Exists' },

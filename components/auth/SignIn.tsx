@@ -30,6 +30,7 @@ const SignIn = () => {
         await signIn('credentials', {
           id: values.id,
           password: values.password,
+          role: 'admin',
           redirect: false
         }).then((res) => {
           if (res?.error) {

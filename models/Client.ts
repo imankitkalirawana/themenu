@@ -1,7 +1,7 @@
-import { User as IUser } from '@/lib/interface';
+import { Client as IClient } from '@/lib/interface';
 import mongoose, { Model } from 'mongoose';
 
-const userSchema = new mongoose.Schema<IUser>(
+const clientSchema = new mongoose.Schema<IClient>(
   {
     email: {
       type: String,
@@ -23,8 +23,7 @@ const userSchema = new mongoose.Schema<IUser>(
     },
     role: {
       type: String,
-      enum: ['admin', 'moderator'],
-      default: 'moderator'
+      default: 'client'
     }
   },
   {
@@ -32,6 +31,6 @@ const userSchema = new mongoose.Schema<IUser>(
   }
 );
 
-const User: Model<IUser> =
-  mongoose.models.User || mongoose.model<IUser>('User', userSchema);
-export default User;
+const Client: Model<IClient> =
+  mongoose.models.Client || mongoose.model<IClient>('Client', clientSchema);
+export default Client;

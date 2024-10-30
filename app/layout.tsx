@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import Sonner from '@/components/providers';
-import Navbar from '@/components/sections/Navbar';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
@@ -16,16 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className="light"
-    >
+    <html lang="en" suppressHydrationWarning className="font-gilroy light">
       <body>
         <Providers>
           <ThemeProvider attribute="class" defaultTheme="light">
-            <Navbar />
-            {children}
+            {/* <Navbar /> */}
+            <main>{children}</main>
             <Sonner />
           </ThemeProvider>
         </Providers>

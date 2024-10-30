@@ -14,9 +14,9 @@ export default async function Page() {
         <>
           {session.user.role === 'admin' ? (
             <AdminDashboard />
-          ) : session.user.role === 'user' ? (
+          ) : (
             <UserDashboard />
-          ) : null}
+          )}
         </>
       )}
     </>

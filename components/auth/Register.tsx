@@ -35,8 +35,6 @@ export default function Register() {
     }
   }, [searchParams.get('otp')]);
 
-  const router = useRouter();
-
   const formik = useFormik({
     initialValues: {
       id: '',

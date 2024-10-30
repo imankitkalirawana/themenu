@@ -11,14 +11,9 @@ const config = {
   ],
   theme: {
     extend: {
-      keyframes: {
-        'caret-blink': {
-          '0%,70%,100%': { opacity: '1' },
-          '20%,50%': { opacity: '0' }
-        }
-      },
-      animation: {
-        'caret-blink': 'caret-blink 1.25s ease-out infinite'
+      fontFamily: {
+        wondershine: ['Wondershine', 'sans-serif'],
+        gilroy: ['Gilroy', 'sans-serif']
       }
     }
   },
@@ -30,18 +25,18 @@ const config = {
         light: {
           colors: {
             primary: {
-              '50': '#eef9ef',
-              '100': '#d5f0d8',
-              '200': '#bde7c1',
-              '300': '#a4dfab',
-              '400': '#8cd694',
-              '500': '#73cd7d',
-              '600': '#5fa967',
-              '700': '#4b8551',
-              '800': '#37613b',
-              '900': '#233e26',
+              '50': '#fff3e7',
+              '100': '#ffe1c6',
+              '200': '#ffd0a5',
+              '300': '#febe84',
+              '400': '#fead63',
+              '500': '#fe9b42',
+              '600': '#d28036',
+              '700': '#a5652b',
+              '800': '#794a1f',
+              '900': '#4c2f14',
               foreground: '#000',
-              DEFAULT: '#73cd7d'
+              DEFAULT: '#fe9b42'
             }
           }
         },
@@ -61,33 +56,6 @@ const config = {
             }
           }
         }
-      },
-      layout: {
-        fontSize: {
-          tiny: '0.75rem',
-          small: '0.875rem',
-          medium: '1rem',
-          large: '1.125rem'
-        },
-        lineHeight: {
-          tiny: '1rem',
-          small: '1.25rem',
-          medium: '1.5rem',
-          large: '1.75rem'
-        },
-        radius: {
-          small: '0.5rem',
-          medium: '0.75rem',
-          large: '0.875rem'
-        },
-        borderWidth: {
-          small: '1px',
-          medium: '2px',
-          large: '3px'
-        },
-        disabledOpacity: '0.5',
-        dividerWeight: '1',
-        hoverOpacity: '0.9'
       }
     })
   ]
