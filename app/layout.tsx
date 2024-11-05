@@ -3,6 +3,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import Sonner from '@/components/providers';
 import { Providers } from './providers';
+import Cart from '@/components/sections/menu/cart';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,6 +23,7 @@ export default function RootLayout({
             {/* <Navbar /> */}
             <main>{children}</main>
             <Sonner />
+            <Cart />
           </ThemeProvider>
         </Providers>
       </body>

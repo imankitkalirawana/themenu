@@ -163,4 +163,11 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+  .clamped-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4; /* Limits text to 4 lines */
+    text-overflow: ellipsis;
+  }
 }

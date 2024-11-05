@@ -14,6 +14,19 @@ const config = {
       fontFamily: {
         wondershine: ['Wondershine', 'sans-serif'],
         gilroy: ['Gilroy', 'sans-serif']
+      },
+      animation: {
+        shine: 'shine 2s linear infinite'
+      },
+      keyframes: {
+        shine: {
+          from: {
+            backgroundPosition: '0 0'
+          },
+          to: {
+            backgroundPosition: '-200% 0'
+          }
+        }
       }
     }
   },

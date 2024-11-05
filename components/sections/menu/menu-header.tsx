@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function MenuHeader() {
   return (
     <>
-      <div className="no-scrollbar flex w-full justify-start gap-2 overflow-scroll md:gap-4">
+      <div className="no-scrollbar mx-auto flex w-full justify-start gap-2 overflow-scroll md:gap-4">
         {categories.map((category) => (
           <Link
             href={`/menu/${category.id === 'all' ? '' : category.id}`}
